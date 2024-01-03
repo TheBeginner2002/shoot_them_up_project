@@ -51,8 +51,6 @@ namespace Shmup
 
             if(score >= 300 && !bossSpawned)
             {
-/*                SpawnBoss();
-                bossSpawned = true;*/
 
                 bossObject.SetActive(true); // Kích hoạt bossObject
                 bossActivated = true;
@@ -64,17 +62,6 @@ namespace Shmup
         }
 
         public int GetScore() { return score; }
-
-        public void SpawnBoss()
-        {
-            Vector3 playerPosition = player.transform.position;
-            Vector3 offset = new Vector3(0f, 2f, 0f); // Đây là ví dụ offset (x, y, z)
-
-            // Tính toán vị trí để spawn boss liên quan đến player
-            Vector3 spawnPosition = playerPosition + offset;
-            Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-
-        }
 
     }
 }
