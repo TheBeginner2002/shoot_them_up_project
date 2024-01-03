@@ -733,9 +733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b740bd71cc74042b6ef934fc9b6d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 70
   maxFuel: 50
-  fuelConsumptionRate: 0.5
+  fuelConsumptionRate: 1
 --- !u!1 &233885303
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +3988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes:
   - {fileID: 11400000, guid: 2cad0d8efa149f141b80a6df9dfb4739, type: 2}
+  - {fileID: 11400000, guid: 0f7a14d2df0ec05489b9f1b072b0fa50, type: 2}
   maxEnemies: 100
   spawnInterval: 2
 --- !u!1 &1366018341
