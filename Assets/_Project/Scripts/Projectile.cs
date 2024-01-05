@@ -12,15 +12,21 @@ namespace Shmup
 
         Transform parent;
 
+        AudioManager audioManager;
         public void SetSpeed(float speed) => this.speed = speed;
         public void SetParent(Transform parent) => this.parent = parent;
 
         public Action Callback;
 
+        private void Awake()
+        {
+            audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        }
         void Start()
         {
             if (muzzlePrefab != null)
             {
+                audioManager.playSFX(audioManager.shootSound);
                 var muzzleVFX = Instantiate(muzzlePrefab, transform.position, Quaternion.identity);
                 muzzleVFX.transform.forward = gameObject.transform.forward;
                 muzzleVFX.transform.SetParent(parent);
@@ -42,6 +48,7 @@ namespace Shmup
         {
             if (hitPrefab != null)
             {
+                audioManager.playSFX(audioManager.explosion);
                 ContactPoint contact = collision.contacts[0];
                 var hitVFX = Instantiate(hitPrefab, contact.point, Quaternion.identity);
 
