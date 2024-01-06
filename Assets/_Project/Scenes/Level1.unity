@@ -3696,6 +3696,8 @@ MonoBehaviour:
   rocketSound: {fileID: 8300000, guid: 9f5b3427accdf9442b6a6dd5c69665e3, type: 3}
   explosion: {fileID: 8300000, guid: ec9193fc7ef27104b8a5936a1e3931f0, type: 3}
   background: {fileID: 8300000, guid: d0c55c3a719ea5844b14c786910b1a2a, type: 3}
+  MyMixer: {fileID: 24100000, guid: 1b5ca28c0442764409c119efb2320df6, type: 2}
+  SoundMixer: {fileID: 0}
 --- !u!4 &1084927723
 Transform:
   m_ObjectHideFlags: 0
