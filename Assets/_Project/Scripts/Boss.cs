@@ -1,14 +1,17 @@
-﻿using System;
+﻿using Eflatun.SceneReference;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Shmup {
     public class Boss : MonoBehaviour {
+        [SerializeField] SceneReference mainMenuScene;
+        [SerializeField] GameObject gameWinUi;
         [SerializeField] float maxHealth = 100f;
         [SerializeField] GameObject explosionPrefab;
         float health;
-        
         Collider bossCollider;
 
         public List<BossStage> Stages;
@@ -36,7 +39,8 @@ namespace Shmup {
         public float GetHealthNormalized() => health / maxHealth;
 
         void CheckStageComplete() {
-            if (Stages[currentStage].IsStageComplete()) {
+            if (Stages[currentStage].IsStageComplete()) 
+            {
                 AdvanceToNextStage();
             }
         }
@@ -64,8 +68,22 @@ namespace Shmup {
         }
 
         void BossDefeated() {
-            Debug.Log("Boss defeated!");
+/*            Debug.Log("Boss defeated!");*/
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+            if (gameWinUi.activeSelf == false)
+            {
+                gameWinUi.SetActive(true);
+            }
+
+            StartCoroutine(LoadMenuAfterDelay());
+        }
+
+        IEnumerator LoadMenuAfterDelay()
+        {
+            yield return new WaitForSeconds(2f);
+
+            Loader.Load(mainMenuScene);
         }
     }
 }

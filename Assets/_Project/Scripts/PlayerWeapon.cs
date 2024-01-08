@@ -5,9 +5,7 @@ namespace Shmup
     public class PlayerWeapon : Weapon
     {
         InputReader input;
-        float fireTimer;
-
-    
+        float fireTimer;    
 
         void Awake()
         {
