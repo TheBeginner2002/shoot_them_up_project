@@ -5,8 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 namespace Shmup
 {
     public class GameManager :MonoBehaviour
-    {
-        
+    {     
         [SerializeField] SceneReference mainMenuScene;
         [SerializeField] GameObject gameOverUi;
         public static GameManager Instance { get; private set; }
@@ -31,7 +30,6 @@ namespace Shmup
 
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
-            //boss = GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>();
         }
         void Update()
         {
