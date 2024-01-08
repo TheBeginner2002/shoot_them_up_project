@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -29,7 +29,8 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = background;
         musicSource.Play();
-        if (PlayerPrefs.HasKey("VolumeVolume"))
+
+        if (PlayerPrefs.HasKey("VolumeVolume") && PlayerPrefs.HasKey("MusicVolume") && PlayerPrefs.HasKey("SFXVolume"))
         {
             LoadVolume();
         }
@@ -66,10 +67,19 @@ public class AudioManager : MonoBehaviour
     private void LoadVolume()
     {
         SoundMixer.value = PlayerPrefs.GetFloat("VolumeVolume");
-        SoundMixer.value = PlayerPrefs.GetFloat("MusicVolume");
-        SoundMixer.value = PlayerPrefs.GetFloat("SFXVolume");
+        MusicMixer.value = PlayerPrefs.GetFloat("MusicVolume");
+        SFXMixer.value = PlayerPrefs.GetFloat("SFXVolume");
         setVolume();
         setMusic();
         setSFX();
+        // Lấy giá trị âm lượng từ PlayerPrefs
+        float masterVolume = PlayerPrefs.GetFloat("VolumeVolume");
+        float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        float sfxVolume = PlayerPrefs.GetFloat("SFXVolume");
+
+        // Cài đặt âm lượng cho AudioMixer
+        MyMixer.SetFloat("Volume", Mathf.Log10(masterVolume) * 20);
+        MyMixer.SetFloat("Music", Mathf.Log10(musicVolume) * 20);
+        MyMixer.SetFloat("SFX", Mathf.Log10(sfxVolume) * 20);
     }
 }
