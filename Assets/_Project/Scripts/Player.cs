@@ -40,6 +40,15 @@ namespace Shmup
         //    currentBulletPrefab = newBulletPrefab;
         //}
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                TakeDamage(0);
+                Destroy(collision.gameObject);
+            }
+        }
+
         protected override void Die()
         {
             // TODO

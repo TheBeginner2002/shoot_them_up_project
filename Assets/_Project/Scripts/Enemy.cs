@@ -17,6 +17,17 @@ namespace Shmup
             Destroy(gameObject);
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                Destroy(gameObject);
+                collision.gameObject.GetComponent<Player>().TakeDamage(10);
+                GameManager.Instance.AddScore(10);
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                OnSystemDestroyed?.Invoke();
+            }
+        }
         public UnityEvent OnSystemDestroyed;
     }
 }
