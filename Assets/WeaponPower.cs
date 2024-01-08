@@ -13,9 +13,7 @@ namespace Shmup
             {
                 Player player = other.GetComponent<Player>();
                 if (player != null)
-                {
-                    // Gọi phương thức ChangeBulletType trong lớp Player
-/*                    player.ChangeBulletType(newBulletPrefab);*/
+                
 
                     // Hủy đối tượng power-up
                     Destroy(gameObject);
