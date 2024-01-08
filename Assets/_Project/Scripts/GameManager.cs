@@ -49,7 +49,7 @@ namespace Shmup
                 }
             }
 
-            if(score >= 300 && !bossSpawned)
+            if(score >= 700 && !bossSpawned)
             {
 
                 bossObject.SetActive(true); // Kích hoạt bossObject
