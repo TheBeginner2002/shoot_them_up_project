@@ -734,6 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 70
+  audioManager: {fileID: 0}
   maxFuel: 50
   fuelConsumptionRate: 0.5
 --- !u!1 &233885303
@@ -830,6 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  audioManager: {fileID: 0}
   explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
   OnSystemDestroyed:
     m_PersistentCalls:
@@ -1009,11 +1011,11 @@ GameObject:
   - component: {fileID: 312028287}
   m_Layer: 7
   m_Name: Boss
-  m_TagString: MainCamera
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &312028286
 Transform:
   m_ObjectHideFlags: 0
@@ -3237,6 +3239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  audioManager: {fileID: 0}
   explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
   OnSystemDestroyed:
     m_PersistentCalls:
@@ -4579,6 +4582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  audioManager: {fileID: 0}
   explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
   OnSystemDestroyed:
     m_PersistentCalls:
@@ -6134,6 +6138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  audioManager: {fileID: 0}
   explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
   OnSystemDestroyed:
     m_PersistentCalls:
@@ -7036,6 +7041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  audioManager: {fileID: 0}
   explosionPrefab: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
   OnSystemDestroyed:
     m_PersistentCalls:

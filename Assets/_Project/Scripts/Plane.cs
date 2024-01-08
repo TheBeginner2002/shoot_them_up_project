@@ -6,10 +6,11 @@ namespace Shmup
     {
         [SerializeField] int maxHealth;
         int health;
-
+        public AudioManager audioManager;
         protected virtual void Awake() 
         {
-            health = maxHealth;    
+            health = maxHealth;
+            audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         }
 
         public void SetMaxHealth(int amount)
