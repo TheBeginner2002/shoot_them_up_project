@@ -736,6 +736,7 @@ MonoBehaviour:
   maxHealth: 70
   maxFuel: 50
   fuelConsumptionRate: 0.5
+  defaultBulletPrefab: {fileID: 0}
 --- !u!1 &233885303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,7 +1747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &600601683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6665,6 +6666,7 @@ MonoBehaviour:
   itemPrefabs:
   - {fileID: 6006332893921520161, guid: 72d8a46f8338c9d46bdcb551dbdfea84, type: 3}
   - {fileID: 8689688751604548439, guid: bd6ae22a13d501b4696bba54b5e4497b, type: 3}
+  - {fileID: -5731391054310365132, guid: b74c525333f400b47b43cddc7861101a, type: 3}
   spawnInterval: 3
   spawnRadius: 3
 --- !u!1 &2021534569
