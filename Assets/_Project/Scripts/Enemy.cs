@@ -8,7 +8,6 @@ namespace Shmup
     {
         [SerializeField] GameObject explosionPrefab;
         /*internal object OnSystemDestroyed;*/
-
         protected override void Die()
         {
             GameManager.Instance.AddScore(10);
@@ -21,6 +20,7 @@ namespace Shmup
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                audioManager.playSFX(audioManager.explosion);
                 Destroy(gameObject);
                 collision.gameObject.GetComponent<Player>().TakeDamage(10);
                 GameManager.Instance.AddScore(10);
