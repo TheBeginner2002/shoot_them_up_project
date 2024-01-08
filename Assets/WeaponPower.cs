@@ -17,7 +17,6 @@ namespace Shmup
 
                     // Hủy đối tượng power-up
                     Destroy(gameObject);
-                }
             }
             else
             {
