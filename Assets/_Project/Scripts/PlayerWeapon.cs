@@ -7,6 +7,8 @@ namespace Shmup
         InputReader input;
         float fireTimer;
 
+    
+
         void Awake()
         {
             input = GetComponent<InputReader>();

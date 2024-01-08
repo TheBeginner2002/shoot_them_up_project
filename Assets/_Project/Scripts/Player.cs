@@ -7,12 +7,15 @@ namespace Shmup
 
         [SerializeField] float maxFuel;
         [SerializeField] float fuelConsumptionRate;
+        //public GameObject defaultBulletPrefab; // Đạn mặc định
+        //private GameObject currentBulletPrefab; // Đạn hiện tại
 
         float fuel;
 
         void Start()
         {
             fuel = maxFuel;
+            //currentBulletPrefab = defaultBulletPrefab;
         }
         public float GetFuelNormalized()
         {
@@ -31,6 +34,11 @@ namespace Shmup
                 fuel = maxFuel;
             }
         }
+        //public void ChangeBulletType(GameObject newBulletPrefab)
+        //{
+        //    // Thay đổi loại đạn
+        //    currentBulletPrefab = newBulletPrefab;
+        //}
 
         protected override void Die()
         {
