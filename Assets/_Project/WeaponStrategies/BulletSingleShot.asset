@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BulletSingleShot
   m_EditorClassIdentifier: 
   damage: 10
-  fireRate: 0.5
+  fireRate: 1.5
   projectileSpeed: 7
   projectileLifetime: 2
   projectilePrefab: {fileID: 640044540938010710, guid: b45f5bae1893e64479213740ec851e22, type: 3}
