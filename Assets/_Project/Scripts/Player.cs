@@ -34,17 +34,11 @@ namespace Shmup
                 fuel = maxFuel;
             }
         }
-        //public void ChangeBulletType(GameObject newBulletPrefab)
-        //{
-        //    // Thay đổi loại đạn
-        //    currentBulletPrefab = newBulletPrefab;
-        //}
 
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                TakeDamage(0);
                 Destroy(collision.gameObject);
             }
         }
