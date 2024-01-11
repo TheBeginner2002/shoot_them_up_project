@@ -23,9 +23,6 @@ namespace Shmup
                 audioManager.playSFX(audioManager.explosion);
                 Destroy(gameObject);
                 collision.gameObject.GetComponent<Player>().TakeDamage(10);
-                GameManager.Instance.AddScore(10);
-                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-                OnSystemDestroyed?.Invoke();
             }
         }
         public UnityEvent OnSystemDestroyed;
