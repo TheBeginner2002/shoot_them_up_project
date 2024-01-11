@@ -38,11 +38,12 @@ namespace Shmup {
         
         public float GetHealthNormalized() => health / maxHealth;
 
-        void CheckStageComplete() {
-            if (Stages[currentStage].IsStageComplete()) 
-            {
-                AdvanceToNextStage();
-            }
+        void CheckStageComplete()
+        {
+                if (Stages[currentStage].IsStageComplete())
+                {
+                    AdvanceToNextStage();
+                }
         }
 
         void AdvanceToNextStage() {
