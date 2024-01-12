@@ -4677,7 +4677,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cad0d8efa149f141b80a6df9dfb4739, type: 2}
   - {fileID: 11400000, guid: 0f7a14d2df0ec05489b9f1b072b0fa50, type: 2}
   maxEnemies: 100
-  spawnInterval: 3
+  spawnInterval: 2
   spline1: {fileID: 729025883}
   spline2: {fileID: 1448343393}
 --- !u!1 &1366018341
