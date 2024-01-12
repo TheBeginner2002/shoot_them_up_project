@@ -6,14 +6,13 @@ namespace Shmup
 {
     public class minion : WeaponPower
     {
-        // Start is called before the first frame update
+         public GameObject helperPrefab;
         void Start()
         {
-            // Kiểm tra xem thuộc tính isHelperActive có phải là true hay không
             if (isHelperActive)
             {
-                // Đặt thuộc tính enabled của trợ thủ thành true
-                enabled = true;
+
+                helperPrefab.SetActive(true);
             }
         }
 
